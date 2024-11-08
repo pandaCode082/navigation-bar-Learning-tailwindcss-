@@ -8,4 +8,4 @@ npm install
 ```
 
 ## ارتباط با ما 
-[گروه تلگرام](https://t.me/frontend_webdesigner)
+[گروه تلگرام](https://t.me/frontend_webdesigner) 🔵
