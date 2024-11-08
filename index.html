@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/style.css">
+    <title>navigation bar</title>
+</head>
+
+<body class="w-screen min-h-screen text-white bg-slate-700">
+    <nav
+        class="container h-20 bg-gradient-to-tr from-slate-500/20 to-white/60 flex justify-between px-10 items-center rounded-b-xl text-sm lg:text-base">
+        <a href="#" title="mrCode" class="sm:inline-block hidden">
+            <img src="https://s8.uupload.ir/files/pandalogo_4yq6.png" alt="logo" class="lg:w-32 w-24" />
+        </a>
+
+        <div class="space-x-7 capitalize hidden sm:inline-block">
+            <a href="#">home</a>
+            <a href="#">about</a>
+            <a href="#">blog</a>
+            <a href="#">contact</a>
+            <a href="#">help</a>
+        </div>
+
+        <!-- mobile nav -->
+        <button onclick="openMobileMenuHandler()" id="mobile_menu-open-btn" class="sm:hidden inline-block">
+            <!-- open -->
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-8">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+            <!-- close -->
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-8">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+            </svg>
+        </button>
+
+        <!-- mobile list -->
+        <div id="mobile-menu"
+            class="w-3/5 fixed h-screen top-0 right-0 bg-slate-800 text-white flex sm:hidden flex-col items-center pt-11">
+            <a href="#" title="mrCode">
+                <img src="https://s8.uupload.ir/files/pandalogo_4yq6.png" alt="logo" class="w-32" />
+            </a>
+
+            <div class="space-y-4 capitalize w-full text-lg mt-10">
+                <a class="mobile-list_item active-link" href="#">home</a>
+                <a class="mobile-list_item" href="#">about</a>
+                <a class="mobile-list_item" href="#">blog</a>
+                <a class="mobile-list_item" href="#">contact</a>
+                <a class="mobile-list_item" href="#">help</a>
+            </div>
+
+            <a href="#" class="block w-full absolute bottom-0 py-4 pl-8">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-10">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M8.25 9V5.25A2.25 2.25 0 0 1 10.5 3h6a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 16.5 21h-6a2.25 2.25 0 0 1-2.25-2.25V15M12 9l3 3m0 0-3 3m3-3H2.25" />
+                </svg>
+            </a>
+        </div>
+
+
+        <a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-8">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M8.25 9V5.25A2.25 2.25 0 0 1 10.5 3h6a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 16.5 21h-6a2.25 2.25 0 0 1-2.25-2.25V15M12 9l3 3m0 0-3 3m3-3H2.25" />
+            </svg>
+        </a>
+    </nav>
+
+
+    <script>
+        const openBtn = document.getElementById("mobile_menu-open-btn");
+        const menu = document.getElementById("mobile-menu");
+        const openMobileMenuHandler = (event) => {
+            openBtn.classList.toggle("close");
+            menu.classList.toggle("menu-active")
+        }
+    </script>
+</body>
+
+</html>

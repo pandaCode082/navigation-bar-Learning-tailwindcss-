@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+    .mobile-list_item {
+        @apply text-center block border-y border-white/30 py-2 active:bg-black/25;
+    }
+
+    .mobile-list_item.active-link {
+        @apply bg-black/25 py-5 transition-all duration-500;
+    }
+
+    /* ------------- mobile ----------- */
+    #mobile_menu-open-btn>svg:last-child {
+        @apply hidden;
+    }
+
+    #mobile_menu-open-btn>svg:first-child {
+        @apply block;
+    }
+
+    /* ------------- close ------------- */
+    #mobile_menu-open-btn.close>svg:first-child {
+        @apply hidden;
+    }
+
+    #mobile_menu-open-btn.close>svg:last-child {
+        @apply block;
+    }
+
+
+    #mobile-menu {
+        @apply -right-full transition-all;
+    }
+
+    #mobile-menu.menu-active {
+        @apply right-0;
+    }
+}
