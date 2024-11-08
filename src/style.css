@@ -689,11 +689,6 @@ video {
   height: 2.5rem;
 }
 
-.size-6 {
-  width: 1.5rem;
-  height: 1.5rem;
-}
-
 .size-8 {
   width: 2rem;
   height: 2rem;
@@ -794,12 +789,25 @@ video {
   padding-bottom: 1rem;
 }
 
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
 .pl-8 {
   padding-left: 2rem;
 }
 
 .pt-11 {
   padding-top: 2.75rem;
+}
+
+.pb-3 {
+  padding-bottom: 0.75rem;
+}
+
+.pb-4 {
+  padding-bottom: 1rem;
 }
 
 .text-lg {
@@ -840,4 +848,50 @@ video {
     font-size: 1rem;
     line-height: 1.5rem;
   }
+}
+
+.\[\&\>a\:hover\]\:border>a:hover {
+  border-width: 1px;
+}
+
+.\[\&\>a\:hover\]\:border-b>a:hover {
+  border-bottom-width: 1px;
+}
+
+.\[\&\>a\:hover\]\:px-2>a:hover {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.\[\&\>a\:hover\]\:pb-4>a:hover {
+  padding-bottom: 1rem;
+}
+
+.\[\&\>a\]\:px-2>a {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.\[\&\>a\]\:pb-4>a {
+  padding-bottom: 1rem;
+}
+
+.\[\&\>a\]\:pb-2>a {
+  padding-bottom: 0.5rem;
+}
+
+.\[\&\>a\]\:pb-1>a {
+  padding-bottom: 0.25rem;
+}
+
+.\[\&\>a\]\:transition>a {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.\[\&\>a\]\:duration-300>a {
+  transition-duration: 300ms;
 }
